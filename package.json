@@ -1,0 +1,39 @@
+{
+  "name": "BCFC-Marker",
+  "version": "1.0.0",
+  "description": "BCFC URL Maker",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "mac": "electron-builder -m",
+    "win": "electron-builder -w",
+    "build": "electron-builder -mwl"
+  },
+  "build": {
+    "appId": "com.bcfc.bcfcmarker",
+    "directories": {
+      "buildResources": "."
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "win": {
+      "certificateFile": "private/BCFC-Marker.p12",
+      "verifyUpdateCodeSignature": false
+    }
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "homepage": "http://bcfc.ca",
+  "author": "Demar Swack",
+  "license": "BCFC License",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-builder": "^20.8.1",
+    "electron-reload": "^1.2.2"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "query-string": "^6.0.0"
+  }
+}
