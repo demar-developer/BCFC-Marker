@@ -15,15 +15,25 @@
       "buildResources": "."
     },
     "mac": {
-      "category": "public.app-category.productivity",
-      "target": "dmg"
+      "publish": [
+        "github"
+      ],
+      "category": "public.app-category.productivity"
     },
     "win": {
+      "publish": [
+        "github"
+      ],
       "certificateFile": "private/BCFC-Marker.p12",
       "verifyUpdateCodeSignature": false
+    },
+    "linux": {
+      "publish": [
+        "github"
+      ],
+      "category": "Network"
     }
   },
-  "repository": "https://github.com/electron/electron-quick-start",
   "homepage": "http://bcfc.ca",
   "author": "Demar Swack",
   "license": "BCFC License",
@@ -33,6 +43,8 @@
     "electron-reload": "^1.2.2"
   },
   "dependencies": {
+    "electron-log": "^2.2.14",
+    "electron-updater": "^2.21.4",
     "jquery": "^3.3.1",
     "query-string": "^6.0.0"
   }
